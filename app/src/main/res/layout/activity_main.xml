@@ -8,9 +8,11 @@
 
     <Button
         android:id="@+id/first_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="15dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="sayHello"
@@ -19,20 +21,23 @@
         android:textColor="#fff"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/second_button"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/second_button"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:background="@color/colorPrimaryDark"
         android:text="Hello"
-        android:textSize="12sp"
         android:textColor="#fff"
-        app:layout_constraintBaseline_toBaselineOf="@+id/first_button"
-        app:layout_constraintEnd_toEndOf="@+id/textView" />
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
