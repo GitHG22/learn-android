@@ -1,29 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/first_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="sayHello"
+        android:padding="10dp"
+        android:text="@string/first_button"
+        android:textSize="12sp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Hello"
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/first_button"
+        app:layout_constraintEnd_toEndOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_default"
-        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="16dp"
+        android:background="#fcca53"
+        android:padding="19dp"
         android:text="@string/textview_hello_android"
-        tools:text="textView" />
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_button"
+        tools:text="This will contain some information about the app." />
 
     <EditText
+        android:id="@+id/editText"
         android:name="Hello"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Don't Type Here!"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1dp"
+        android:autofillHints="username"
+        android:hint="Please enter your Username"
         android:inputType="text"
-        android:gravity="center"
         android:selectAllOnFocus="true"
-        android:text="dafuq"
-        android:autofillHints="username"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
