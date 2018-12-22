@@ -19,9 +19,10 @@
         </activity>
         <activity android:name=".Scroller">
             <intent-filter>
-                <action android:name="android.intent.action.SCROLLER"/>
+                <action android:name="android.intent.action.SCROLLER" />
             </intent-filter>
         </activity>
+        <activity android:name=".counter"></activity>
     </application>
 
 </manifest>

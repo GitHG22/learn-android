@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="73dp">
 
     <Button
-        android:id="@+id/first_button"
+        android:id="@+id/button_scroller"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="start"
@@ -16,20 +16,19 @@
         android:background="@color/colorPrimaryDark"
         android:onClick="sayHello"
         android:padding="10dp"
-        android:text="@string/first_button"
+        android:text="@string/button_scroller"
         android:textColor="#fff"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintBottom_toTopOf="@id/button_counter"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintVertical_bias="0" />
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_counter"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="start"
@@ -39,12 +38,14 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryDark"
         android:padding="10dp"
-        android:text="Hello"
+        android:text="@string/button_counter_label"
         android:textColor="#fff"
+        android:textSize="12sp"
+        android:onClick="showCounter"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/first_button"
-        app:layout_constraintStart_toStartOf="@+id/first_button"
-        app:layout_constraintTop_toBottomOf="@+id/first_button"
+        app:layout_constraintEnd_toEndOf="@+id/button_scroller"
+        app:layout_constraintStart_toStartOf="@+id/button_scroller"
+        app:layout_constraintTop_toBottomOf="@+id/button_scroller"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
@@ -60,7 +61,7 @@
         android:text="@string/textview_hello_android"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/first_button"
+        app:layout_constraintStart_toEndOf="@+id/button_scroller"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="This will contain some information about the app." />
 
@@ -75,7 +76,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:autofillHints="username"
-        android:hint="Please enter your Username"
+        android:hint="@string/editText_hint"
         android:inputType="text"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"

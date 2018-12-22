@@ -18,21 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-/*    public MainActivity activity;
-
-    @Override
-    public void onAttach(Activity activity){
-        this.activity = activity;
-    }*/
-
-
-
-    public void sayHello(View v){
-       Button thebutton = findViewById(R.id.first_button);
+    protected void sayHello(View v){
+       Button button = findViewById(R.id.button_scroller);
        Intent scroller = new Intent(this, Scroller.class);
-       thebutton.setText(R.string.first_button_change);
+       button.setText(R.string.button_scroller_change);
        Toast.makeText(this, "Magic!", Toast.LENGTH_LONG).show();
        startActivity(scroller);
+    }
+
+    protected void showCounter(View view){
+        Intent counter = new Intent(this, counter.class);
+        startActivity(counter);
+
     }
 
 }
