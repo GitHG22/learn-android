@@ -15,7 +15,7 @@ public class counter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
-        showCount = (TextView) findViewById(R.id.counter_text);
+        showCount = findViewById(R.id.counter_text);
     }
 
     public void increment(View view){

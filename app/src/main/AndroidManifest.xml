@@ -22,7 +22,11 @@
                 <action android:name="android.intent.action.SCROLLER" />
             </intent-filter>
         </activity>
-        <activity android:name=".counter"></activity>
+        <activity android:name=".counter">
+            <intent-filter>
+                <action android:name="android.intent.action.COUNTER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
